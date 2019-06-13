@@ -18,6 +18,8 @@ const FriendsList = (props) => {
                     <Friend 
                         item = {item}
                         key = {item.id}
+                        deleteFriend = {props.deleteFriend}
+                        setUpdateForm = {props.setUpdateForm}
                     />
                     );
                 })

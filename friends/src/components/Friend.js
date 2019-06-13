@@ -15,11 +15,16 @@ const FriendDiv = styled.div`
 `;
 
 const Friend = (props) => {
+
+    
+
     return(
         <FriendDiv>
             <p>Name: {props.item.name}</p>
             <p>Age: {props.item.age}</p>
             <p>Email: {props.item.email}</p>
+            <button onClick = { e => props.deleteFriend(e, props.item.id)}>Delete</button>
+            <button onClick = {e => props.setUpdateForm(e, props.item)}>Update</button>
         </FriendDiv>
 
     )
